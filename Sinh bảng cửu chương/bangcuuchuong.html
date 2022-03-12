@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td, th{
+        border : 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: rgb(10, 23, 136);
+        color: white;
+    }
+    body{
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">Bảng cửu chương</h1>
+    <table id="mytable" style="width: 100%; ">
+        
+    </table>
+    <script>
+            let table=document.getElementById("mytable");
+                output ="";
+            for (var i = 1 ; i <= 10; i++){
+                output += "<tr>" ;
+                    for( var j = 1; j <= 10; j++ ){
+                        output += "<td>" + i + " x " + j + " = " + j*i + "</td>";
+                    }
+                    output += "</tr>";
+            }
+            table.innerHTML=output;
+    </script>
+</body>
+</html>
