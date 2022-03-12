@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n;
+        do{
+            n = prompt("Nhập vào một số bất kì: ");
+            if (!isNaN(n)){
+                break;
+            }else{
+                alert("bạn cần nhập một số, hãy nhập lại");
+            }
+        }while (isNaN(n)); 
+        function kiemtraSNT(n){
+            var flag = true; 
+            if (n<2){
+                flag = false;
+            }else{
+                for(var i = 2; i < n; i++ ){
+                    if  (n%i==0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if ( flag == true){
+                document.write( n+ " là Số nguyên tố ");
+            }else{
+                document.write(n + " không phải là số nguyên tố");
+            }
+        }
+        kiemtraSNT(n);
+    </script>
+</body>
+</html>
