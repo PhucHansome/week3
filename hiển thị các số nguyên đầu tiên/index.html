@@ -9,6 +9,7 @@
 <body>
     <script>
         var n;
+        //kiểm tra người dùng nhập vào
         do{
             n = prompt("Nhập vào một số bất kì: ");
             if (!isNaN(n)){
@@ -17,6 +18,7 @@
                 alert("bạn cần nhập một số, hãy nhập lại");
             }
         }while (isNaN(n)); 
+        // 
         function kiemtraSNT(n){
             var flag = true; 
             if (n<2){
