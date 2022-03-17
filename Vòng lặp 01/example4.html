@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example4</title>
+</head>
+<body>
+    <script>
+        var a0 = 0;
+        var a1 = 1;
+        var an;
+        var i;
+        var result= "  ";
+        do{
+            var numbers = parseInt(prompt("nhập số giá trị fibo bạn muốn hiển thị")) ;
+        }while(numbers < 0 || numbers > 20);
+        if (numbers == 0){
+            alert(" giá trị fibo hiển thị là n = 0");
+        }
+        if (numbers == 1){
+            alert(" giá trị fibo hiển thị là  n = 1");
+        }    
+        if (numbers >= 2){
+            for ( i = 2 ; i <= numbers ; i++){
+                an = a0 + a1 ;
+                a0 = a1;
+                a1 = an;
+                if ( an % 5 ==0 ){
+                    alert ("số fibo có giá trị an  =  " +an+" đầu tiên trong dãy chia hết cho 5");
+                    break;
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

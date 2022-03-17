@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+</head>
+<body>
+    <script>
+         var n = parseFloat(prompt("Nhập vào số nhiệt độ")) ;
+         while(1){
+            if(n< 20){
+                alert("Nhiệt độ quá thấp");
+                n = parseFloat(prompt("nhập số nhiệt độ cần tăng! "));
+            }
+            if(n>100){
+                alert("Đề nghị giảm nhiệt dộ ");
+                n = parseFloat(prompt("nhập vào số nhiệt độ cần giảm!"));
+            }
+            if (n => 20 && n <=100){
+                alert("Nhiệt dộ vừa phải");
+                break;
+            }
+         }
+    </script>
+</body>
+</html>
