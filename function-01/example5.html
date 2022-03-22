@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let star = ["Polarís", "Aldebran", "Dendeb", "vega", "Altair", "Dubhe", "Regulus"];
+        let constellation = ["Ursa minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function seach_constellation(star_value){
+            let i, flag = 0,index;
+            for (i=0;i < star.length; i++){
+                if (star_value = star[i]){
+                    flag = 1;
+                    index = 1;
+                }
+            }
+            if(flag == 1){
+                alert(`Ngôi sao ${star_value} thuộc chòm sao ${constellation[index]}`);
+            }else{
+                alert("Không tìm thấy ngôi sao");
+            }
+        }
+        let star_input = prompt("Nhập tên ngôi sao");
+        seach_constellation(star_input);
+    </script>
+</body>
+</html>
