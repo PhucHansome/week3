@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example5</title>
+</head>
+<body>
+    <script>
+        function smallnumber(number1 , number2, number3){
+            if (number1 < number2  && number1 < number3 ){
+                
+                alert(number1 + "là số nhỏ nhất")
+                return number1
+            }else if (number2 < number1 && number2 < number3){
+            
+            alert(number2 + "là số nhỏ nhất" );
+            return number2
+            }else if (number3 < number1 && number3 < number2){
+            
+            alert(number3 + "là số nhỏ nhất");
+            return number3;
+            }      
+        }
+        alert(smallnumber(4,3,2))
+    </script>
+</body>
+</html>

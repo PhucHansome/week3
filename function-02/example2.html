@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example2</title>
+</head>
+<body>
+    <script>
+        function perimeterCircle(number){
+            let priemeter =(number + number) * 3.14;
+            return priemeter.toFixed(2);
+        }   
+        function AcreageCircle(number){
+            let area = (number * number) * 3.14;
+            return area.toFixed(2);
+        }
+        let number = 3;
+        alert(`Với bán kính là ${number} ta có diện tích hình tròn là ${AcreageCircle(number)} và chu vi hình tròn ${perimeterCircle(number)}`);
+    </script>
+</body>
+</html>
