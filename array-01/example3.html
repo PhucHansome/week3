@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Array_Value = [1,3,5,7,39,11,200,13,15,100];
+        let result = 0;
+        // let index = 0;
+        let max = Array_Value[0];
+        for(let i = 0; i < Array_Value.length; i++){
+            if(max > Array_Value[i]){
+                // index = i + 1;
+            }else {
+                max = Array_Value[i];
+            }
+            result += Array_Value[i];
+        }
+        document.write(`Phần tử có giá trị lớn nhất là ${max} <br> Trung bình của mảng là ${(result/Array_Value.length).toFixed(1)}`);
+    </script>
+</body>
+</html>
