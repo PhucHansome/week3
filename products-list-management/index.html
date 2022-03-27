@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="idText">
+    <button onclick="addProduct()">Add</button>
+    <button onclick="showProducts()">Show Product</button>
+<div id="idproduct" >
+
+</div>
+</body>
+<script>
+    let products = ['Sony', 'Samsung', 'Nokia', 'Xiaomi', 'Iphone 6']
+    products.push("iphone 7 Plus")
+    products.push("iphone 8 Plus")
+    products.push("iphone X")
+
+    
+    function addProduct(){
+        let valueText = document.getElementById("idText").value;
+        products.unshift(valueText)
+        showProducts()
+    }
+    function saveProduct(index){
+        let elementInput = document.getElementById('idText');
+        let strValue = elementInput.value;
+
+        products[index] = strValue
+        showProducts()
+    }
+    function deleteProduct(index1){
+        products.splice(index1, 1);
+        showProducts();
+    }
+    showProducts();
+    function showProducts(){
+        let productMap = products.map(
+            function(value, index){
+                return `<tr><td>${value}</td><td><button onclick = 'editProduct(${index})'>Edit</button></td>
+                    <td><button onclick = 'saveProduct(${index})'>Save</button></td>
+                    <td><button onclick = ' deleteProduct(${index})'>Delete</button></td>
+                    </tr>`;
+            }
+        );
+
+        let str = "<table border = '1'>" + productMap.join("") + "</table>";
+        let elementProducts = document.getElementById("idproduct");
+        elementProducts.innerHTML = str;
+        showProducts()
+    }
+     function editProduct(vitri){
+         let elementInput = document.getElementById("idText");
+
+         elementInput.value = products[vitri];
+     }
+</script>
+</html>

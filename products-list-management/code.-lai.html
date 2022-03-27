@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="idtext">
+    <button onclick="addproduct()">Add</button>
+    <button onclick="showproduct()">Show products</button>
+    <div    id="idproduct">
+
+    </div>
+</body>
+<script>
+    let product = ["Sony Xperia", "SamSung A32", "Iphone 13 Promax"];
+    showproduct()
+    function showproduct(){
+        let productMap = product.map(
+            function(value, index){
+                return `<tr><td>${value}</td><td><button onclick = 'editProduct(${index})'>Edit</button></td>
+                    <td><button onclick = "deleteproduct(${index})">Delete</button></td>
+                    <td><button onclick = "saveproduct(${index})">Save</button></td></tr>`
+            }
+        );
+        let str = "<table>" + productMap.join("") + "</table>";
+        let elementProducts = document.getElementById("idproduct");
+        elementProducts.innerHTML = str;
+        showproduct()
+    }
+    showproduct()
+    function editProduct(vitri){
+        let elementInput = document.getElementById("idtext");
+
+        elementInput.value = product[vitri];
+    }
+    showproduct()
+    function deleteproduct(index1){
+        product.splice(index1, 1)
+        showproduct()
+    }
+    showproduct()
+    function addproduct(){
+        let valueText = document.getElementById("idtext").value;
+        product.unshift(valueText)
+        showproduct()
+    }
+    function saveproduct(index){
+        let elementInput = document.getElementById("idtext");
+        let strValue = elementInput.value;
+        product[index] = strValue
+        showproduct()
+    }
+</script>
+</html>
