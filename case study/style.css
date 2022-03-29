@@ -1,0 +1,78 @@
+
+*{
+    padding:0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.create_job{
+    margin-bottom: 20px;
+}
+.container{
+    max-width: 600px;
+    margin-top: 100px;
+    margin-left: 272.5px ;
+    text-align: center;
+
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: #F7CCAC;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-control{
+    border: none;
+    outline: none;
+    border-bottom: 1px dashed #E5EFC1;
+    width: 300px;
+}
+.btn:hover{
+    background-color: #3A3845;
+    color: white;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.thead-dark{
+    background-color: grey;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.remove{
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 1px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.done{
+    border: 1px solid  skyblue;
+    background-color:   skyblue;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 1px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+thead{
+    margin-bottom: 10px;
+}
+.show_job{
+    margin-bottom:15px;
+}
